@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Cloudent</title>
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <meta http-equiv=”Content-Type” content=”text/html; charset=UTF-8″ />
+    <meta http-equiv=”Content-Type” content=”text/html; charset=ISO-8859-1″ />
+</head>
+
+<body>
+
+    <header>
+
+        <nav class="navbar navbar-expand-lg bg-primary" data-bs-theme="dark">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="#">Cl&iacute;nica Dental</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarColor01"
+                    aria-controls="navbarColor01" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarColor01">
+                    <ul class="navbar-nav me-auto">
+                        <li class="nav-item">
+                            <a class="nav-link active" href="#" onclick="goAgenda()">Agenda
+                                <span class="visually-hidden">(current)</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#" onclick="goPacientes()">Pacientes</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#" onclick="goTratamientos()">Tratamientos</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#" onclick="goUsuarios()">Usuarios</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#" id="lnkSalir" name="lnkSalir">Salir</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+
+    </header>
+
+    <main class="container login-form">
+
+        <div class="p-4 p-md-2 mb-4 rounded text-body-emphasis bg-body-secondary">
+            <div class="col-lg-6 px-0">
+                <h1 class="display-4 fst-italic">Agenda</h1>
+            </div>
+        </div>
+
+        <div>
+            <form id="form-agenda-add">
+                <label for="fecha">Fecha</label>
+                <input class="form-control" type="date" value="" id="fecha" name="fecha">
+                <label for="hora">Hora</label>
+                <input class="form-control" type="time" value="" id="hora" name="hora">
+                <label for="paciente">Paciente</label>
+                <select class="form-control" value="" id="paciente" name="paciente">
+                </select>
+                <label for="tratamiento">Tratamiento</label>
+                <select class="form-control" value="" id="tratamiento" name="tratamiento">
+                </select>
+                <button class="btn btn-primary" id="btnAgendar">Agendar</button>
+            </form>
+            <hr>
+            <div>
+                <table class="table table-bordered table-hover table-triped">
+                    <tbody id="agendaList"></tbody>
+                </table>
+            </div>
+        </div>
+
+    </main>
+
+    <footer>
+
+    </footer>
+
+</body>
+
+<script src="js/agenda.js"></script>
+<script src="js/scripts.js"></script>
+
+
+</html>
